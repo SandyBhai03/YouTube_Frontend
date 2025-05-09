@@ -50,7 +50,7 @@ A full-stack YouTube clone application built with the MERN stack (MongoDB, Expre
 
 ## 📁 Folder Structure
 
-``sh 
+```sh 
 Youtube-Clone
 │
 ├── Youtube-Backend
@@ -94,7 +94,7 @@ Youtube-Clone
     ├── vite.config.js
     └── package.json
 
-``
+```
 
 ---
 
@@ -132,16 +132,20 @@ Youtube-Clone
 
 ### Backend
 
-``sh
+```sh
+
 cd Youtube-Clone/Youtube-Backend
 npm install
 npm run dev
-``
+
+```
 
 ## Frontend
 
-``sh
+```sh
+
 cd Youtube-Clone/Youtube-Frontend
 npm install
 npm run dev
-``
+
+```
