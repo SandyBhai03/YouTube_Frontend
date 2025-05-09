@@ -55,6 +55,7 @@
     gap: 7px;
     padding: 0 10px;
     width: 85%;
+    text-align: left;
 }
 
 .profile_top_section_About_Name {
@@ -154,12 +155,14 @@
     flex-direction: column;
     width: 100%;
     margin: 6px;
+    text-align: left;
 }
 
 .profileVideo_block_detail_name {
     width: 100%;
     font-size: 17px;
     font-weight: 500;
+    margin: 3px 0;
 }
 
 .profileVideo_block_detail_about {
@@ -211,6 +214,12 @@
 
 /* Mobile */
 @media (max-width: 480px) {
+    .profile_top_section_info{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 230px;
+    }
     .profile_videos{
         display: flex;
         justify-content: center;

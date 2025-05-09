@@ -50,8 +50,9 @@ function Profile({ handleSidebar }) {
             </div>{" "}
             {/* user Channel Name  */}
             <div className="profile_top_section_info">
-              @{user?.userName} <span /> 198K subscribers <span /> {data.length}{" "}
-              videos
+              <div>@{user?.userName} &nbsp;</div> 
+              <div> • 198K subscribers • </div>
+              <div>&nbsp;{data.length} videos</div>
             </div>
             <div className="profile_top_section_info">{user?.about}</div>
           </div>
@@ -84,10 +85,11 @@ function Profile({ handleSidebar }) {
                   </div>
                   <div className="profileVideo_block_detail">
                     <div className="profileVideo_block_detail_name">
-                    {item?.title}
+                      {item?.title}
                     </div>
                     <div className="profileVideo_block_detail_about">
-                      {"198K views"} <span/> {item?.user?.createdAt.slice(0, 10)}
+                      {"198K views"} <span />{" "}
+                      {item?.user?.createdAt.slice(0, 10)}
                     </div>
                   </div>
                 </Link>

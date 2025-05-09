@@ -82,12 +82,18 @@ function Video() {
       message: message,
       video: id,
     };
+    if(body.message==""){
+      toast.warning("please write something first")
+      return;
+    }
     await axios
       .post(`http://localhost:3000/commentApi/comment`, body, {
         withCredentials: true,
       })
       .then((res) => {
         console.log("Response: ", res);
+        toast.success("Your comment added successfully!")
+        window.location.reload();
       })
       .catch((err) => {
         console.log("Error: ", err);
@@ -108,6 +114,11 @@ function Video() {
         console.log("Error: ", error);
       });
   };
+
+  // Handle Subscribe Button Functinality
+  const handleSubscribe = ()=> {
+    toast.success("Channel Subscribed!")
+  }
 
   return (
     <div className="video">
@@ -149,13 +160,13 @@ function Video() {
                   {data?.user?.createdAt.slice(0, 10)}
                 </div>
               </div>
-              <div className="subscribeBtnYoutube">Subscribe</div>
+              <div onClick={handleSubscribe} className="subscribeBtnYoutube">Subscribe</div>
             </div>
             <div className="youtube_video_likeBlock">
               <div className="youtube_video_likeBlock_Like">
                 <ThumbUpOffAltIcon />
                 <div className="youtube_video_likeBlock_NoOfLikes">
-                  {data?.like}
+                  {formatViews(data?.like)}
                 </div>
                 <div className="youtubeVideoDivider"></div>
                 <ThumbDownOffAltIcon />
