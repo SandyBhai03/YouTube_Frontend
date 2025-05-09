@@ -1,0 +1,19 @@
+html, body{
+    color: white;
+    text-align: center;
+}
+.search-results{
+    width: 100vw;
+    padding: 0 36px; 
+    font-size: 20px; 
+    font-weight: 600;
+}
+/* .search-results{
+    color: white;
+    font-size: 20px;
+} */
+.search-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}

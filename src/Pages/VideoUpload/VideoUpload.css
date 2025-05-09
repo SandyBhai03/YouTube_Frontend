@@ -1,0 +1,109 @@
+.video-upload-container {
+    max-width: 550px;
+    min-height: 70vh;
+    margin: 106px auto;
+    padding: 20px;
+    background-color: #1F1F1F;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(201, 198, 198, 0.1);
+    border: 1px solid #dadada46;
+}
+.video-upload-container .heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.video-upload-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.video-upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.video-upload-form input{
+    color: white;
+    font-weight: 500;
+}
+.video-upload-form input[type="text"],
+.video-upload-form textarea {
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px;
+    /* border: 1px solid #ccc; */
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    background-color: #303030;
+    outline: none;
+}
+.video-upload-form input::placeholder, textarea::placeholder{
+    font-weight: 500;
+    font-size: 15px;
+}
+.video-upload-form input:focus,
+textarea:focus {
+    outline: 1px solid #f92525a0;
+    /* Red border on focus */
+}
+
+.video-upload-form textarea {
+    height: 80px;
+}
+
+.file-input label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: 500;
+}
+
+.video-upload-form input[type="file"] {
+    width: 100%;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-group button {
+    padding: 7px 20px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+    background-color: #b90606;
+}
+
+.button-group button[type="button"] {
+    background-color: #2196f3;
+}
+
+.button-group button[type="button"]:hover {
+    background-color: #0b7dda;
+}
+
+.uploading {
+    color: orange;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .upload-success {
+    color: green;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
