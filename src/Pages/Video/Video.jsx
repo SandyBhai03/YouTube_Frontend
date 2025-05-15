@@ -3,6 +3,7 @@ import "./Video.css";
 import { Link, useNavigate } from "react-router-dom";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import ThumbDownOffAltIcon from "@mui/icons-material/ThumbDownOffAlt";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import { formatViews } from "../../utils/formatViews.js";
 
 import { useParams } from "react-router-dom";
@@ -82,8 +83,8 @@ function Video() {
       message: message,
       video: id,
     };
-    if(body.message==""){
-      toast.warning("please write something first")
+    if (body.message == "") {
+      toast.warning("please write something first");
       return;
     }
     await axios
@@ -92,7 +93,7 @@ function Video() {
       })
       .then((res) => {
         console.log("Response: ", res);
-        toast.success("Your comment added successfully!")
+        toast.success("Your comment added successfully!");
         window.location.reload();
       })
       .catch((err) => {
@@ -116,9 +117,9 @@ function Video() {
   };
 
   // Handle Subscribe Button Functinality
-  const handleSubscribe = ()=> {
-    toast.success("Channel Subscribed!")
-  }
+  const handleSubscribe = () => {
+    toast.success("Channel Subscribed!");
+  };
 
   return (
     <div className="video">
@@ -160,7 +161,9 @@ function Video() {
                   {data?.user?.createdAt.slice(0, 10)}
                 </div>
               </div>
-              <div onClick={handleSubscribe} className="subscribeBtnYoutube">Subscribe</div>
+              <div onClick={handleSubscribe} className="subscribeBtnYoutube">
+                Subscribe
+              </div>
             </div>
             <div className="youtube_video_likeBlock">
               <div className="youtube_video_likeBlock_Like">
@@ -254,12 +257,23 @@ function Video() {
               className="videoSuggestionsBlock"
               key={idx}
             >
+              {/*Gray and red layer div*/}
               <div
-                className={`thumbnail_overlay ${
+                className={`thumbnail_overlay show-text ${
                   isVideoPlaying ? "thumbnail_overlay-red" : ""
                 }`}
-              ></div>{" "}
-              {/*Gray and red layer*/}
+              >
+                <span id="show-text">
+                  {" "}
+                  {isVideoPlaying ? (
+                    "Playing..."
+                  ) : (
+                    <>
+                      Play<PlayArrowIcon sx={{padding: "1px"}} />
+                    </>
+                  )}
+                </span>
+              </div>{" "}
               <div className="video_suggetion_thumbnail">
                 <img
                   className="video_suggetion_thumbnail_img"

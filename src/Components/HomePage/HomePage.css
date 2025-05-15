@@ -65,7 +65,7 @@
     transition: background 0.3s ease-in;
   }
   .homePage_option.active {
-    background-color: #a1a0a0;
+    background-color: #f5f3f3;
     font-weight: bold;
     color: black;
   }
